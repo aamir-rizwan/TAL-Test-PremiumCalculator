@@ -10,12 +10,12 @@
 
       <mat-label class="tal-label">Age</mat-label>
       <mat-form-field appearance="fill">
-        <input matInput formControlName="age"/>
+        <input matInput formControlName="age" type="number"/>
       </mat-form-field>
 
       <mat-label class="tal-label">Date of birth</mat-label>
       <mat-form-field appearance="fill">
-        <input matInput [matDatepicker]="picker" formControlName="dob"/>
+        <input matInput [matDatepicker]="picker" formControlName="dob" type="date"/>
         <mat-datepicker-toggle
           matIconSuffix
           [for]="picker"

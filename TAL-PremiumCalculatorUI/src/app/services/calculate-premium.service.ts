@@ -15,15 +15,11 @@ export class CalculatePremiumService {
   constructor(public http: HttpClient) {}
 
   public getOccupations(): Observable<any> {
-    return this.http.get<any[]>(
-      this.BaseUrl + '/CalculatePremium/GetOccupations'
-    );
+    return this.http.get<any[]>(this.BaseUrl + '/CalculatePremium/GetOccupations');
   }
 
   public CalculatePremium(request: PremiumCalculatorRequest): Observable<ApiResponse<PremiumCalculatorResponse>> {
     return this.http.post<ApiResponse<PremiumCalculatorRequest>>(
-      `${this.BaseUrl}/CalculatePremium/CalculatePremium`,
-      request
-    );
+      `${this.BaseUrl}/CalculatePremium/CalculatePremium`, request);
   }
 }

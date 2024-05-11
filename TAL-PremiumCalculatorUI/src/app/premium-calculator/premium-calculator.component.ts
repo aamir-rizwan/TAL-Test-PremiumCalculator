@@ -20,7 +20,9 @@ import { CommonModule } from '@angular/common';
   templateUrl: './premium-calculator.component.html',
   styleUrls: ['./premium-calculator.component.css', '../common/common.css'],
 })
+
 export class PremiumCalculatorComponent implements OnInit {
+
   createForm: FormGroup = new FormGroup({});
   occupations: Occupations[] = [];
   maxDate: Date = new Date();
@@ -44,12 +46,9 @@ export class PremiumCalculatorComponent implements OnInit {
   }
 
   getOccupations(): any {
-    this.calculatorService
-      .getOccupations()
-      .subscribe((data: ApiResponse<Occupations[]>) => {
+    this.calculatorService.getOccupations().subscribe((data: ApiResponse<Occupations[]>) => {
         if (data) {
-          this.occupations = data.content;
-          console.log(this.occupations);
+          this.occupations = data.content; 
         }
       });
   }
@@ -62,8 +61,7 @@ export class PremiumCalculatorComponent implements OnInit {
       this.request.occupation = this.createForm.get('occupation')?.value;
       this.request.deathSumInsured = this.createForm.get('deathSumInsured')?.value;
 
-      this.calculatorService.CalculatePremium(this.request)
-        .subscribe((data: ApiResponse<PremiumCalculatorResponse>) => {
+      this.calculatorService.CalculatePremium(this.request).subscribe((data: ApiResponse<PremiumCalculatorResponse>) => {
           if (data) {
             this.response = data.content;            
           }
