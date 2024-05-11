@@ -1,0 +1,6 @@
+@TAL_PremiumCalculatorAPI_HostAddress = http://localhost:5076
+
+GET {{TAL_PremiumCalculatorAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
