@@ -1,4 +1,4 @@
-export interface InsurancePremium {
+export class PremiumCalculatorRequest {
   name: string | undefined;
   age: number | undefined;
   dob: Date | undefined;

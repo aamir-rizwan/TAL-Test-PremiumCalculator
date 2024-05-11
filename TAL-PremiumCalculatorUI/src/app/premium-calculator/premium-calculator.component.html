@@ -1,1 +1,49 @@
-<p>premium-calculator works!</p>
+<div class="tal-container">
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <div class="tal-form-fields">
+      <mat-label class="tal-label">Name</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Name" />
+      </mat-form-field>
+
+      <mat-label class="tal-label">Age</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Age" />
+      </mat-form-field>
+
+      <mat-label class="tal-label">Date of birth</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Age" />
+      </mat-form-field>
+
+      <mat-label class="tal-label">Occupation</mat-label>
+      <mat-form-field>
+        <mat-label>Occupation</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-label class="tal-label">Death – Sum Insured</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Death – Sum Insured" />
+      </mat-form-field>
+      <div>
+        <button
+          class="tal-button-secondary"
+          style="width: 210px; margin-top: 20px"
+        >
+          Calculate Premium
+        </button>
+
+        <button
+          class="tal-button-reject"
+          style="width: 170px; margin-top: 20px"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
