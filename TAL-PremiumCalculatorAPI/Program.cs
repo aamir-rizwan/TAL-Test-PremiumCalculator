@@ -1,3 +1,6 @@
+using TAL_PremiumCalculatorAPI.Services.Abstractions;
+using TAL_PremiumCalculatorAPI.Services.Implementations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Register Services
+
+builder.Services.AddTransient<ICalculatePremium, CalculatePremium>();
 
 var app = builder.Build();
 
