@@ -4,6 +4,6 @@ namespace TAL_PremiumCalculatorAPI.Services.Abstractions
 {
     public interface ICalculatePremium
     {
-       Task<decimal> CalculatMyPremium(PremiumCalculatorRequest request);
+       Task<Result<PremiumCalculatorResponse>> CalculateMyPremium(PremiumCalculatorRequest request);
     }
 }

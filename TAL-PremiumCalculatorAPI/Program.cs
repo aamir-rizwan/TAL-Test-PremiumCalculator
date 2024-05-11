@@ -13,6 +13,7 @@ builder.Services.AddSwaggerGen();
 // Register Services
 
 builder.Services.AddTransient<ICalculatePremium, CalculatePremium>();
+builder.Services.AddTransient<IOccupationsInfo, OccupationsInfo>();
 
 var app = builder.Build();
 
