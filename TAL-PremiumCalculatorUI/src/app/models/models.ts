@@ -6,8 +6,17 @@ export class PremiumCalculatorRequest {
   deathSumInsured: number | undefined;
 }
 
+export class PremiumCalculatorResponse {
+  name: string | undefined;
+  age: number | undefined;
+  dob: Date | undefined;
+  occupation: string | undefined;
+  deathSumInsured: number | undefined;
+  deathPremium: number | undefined;
+}
+
 export interface Occupations {
-  occupation: Occupation;
+  name: string;
   rating: OccupationRatingType;
 }
 
@@ -30,4 +39,10 @@ export enum Occupation {
   Farmer = 'Farmer',
   Mechanic = 'Mechanic',
   Florist = 'Florist',
+}
+
+export class ApiResponse<T> {
+  success: boolean | undefined;
+  message: string | undefined;
+  content: T | any;
 }

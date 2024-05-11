@@ -1,49 +1,54 @@
 <div class="tal-container">
+  <h1>Calculate Premium</h1>
+  <br>
   <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
     <div class="tal-form-fields">
       <mat-label class="tal-label">Name</mat-label>
       <mat-form-field appearance="fill">
-        <input matInput placeholder="Name" />
+        <input matInput formControlName="name"/>
       </mat-form-field>
 
       <mat-label class="tal-label">Age</mat-label>
       <mat-form-field appearance="fill">
-        <input matInput placeholder="Age" />
+        <input matInput formControlName="age"/>
       </mat-form-field>
 
       <mat-label class="tal-label">Date of birth</mat-label>
       <mat-form-field appearance="fill">
-        <input matInput placeholder="Age" />
+        <input matInput [matDatepicker]="picker" formControlName="dob"/>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-hint>Select only valid DOB, some Date checks are missing</mat-hint>
       </mat-form-field>
-
+      <br />
       <mat-label class="tal-label">Occupation</mat-label>
       <mat-form-field>
-        <mat-label>Occupation</mat-label>
-        <mat-select>
-          <mat-option value="one">First option</mat-option>
-          <mat-option value="two">Second option</mat-option>
+        <mat-select formControlName="occupation">
+          <mat-option
+            *ngFor="let occupation of occupations"
+            [value]="occupation.name"
+            >{{ occupation.name }}</mat-option
+          >
         </mat-select>
       </mat-form-field>
 
       <mat-label class="tal-label">Death – Sum Insured</mat-label>
       <mat-form-field appearance="fill">
-        <input matInput placeholder="Death – Sum Insured" />
+        <input matInput type="number" formControlName="deathSumInsured"/>
       </mat-form-field>
       <div>
-        <button
-          class="tal-button-secondary"
-          style="width: 210px; margin-top: 20px"
-        >
+        <button type="submit" class="tal-button-secondary" style="width: 210px; margin-top: 20px">
           Calculate Premium
         </button>
-
-        <button
-          class="tal-button-reject"
-          style="width: 170px; margin-top: 20px"
-        >
+        <button type="button" class="tal-button-reject" style="width: 170px; margin-top: 20px" (click)="onCancel()">
           Cancel
         </button>
+        <p *ngIf="response" style="color: brown; font-weight: 300;">Hello {{response.name}} your calculated Premium is ${{response.deathPremium}}</p>
       </div>
+      
     </div>
   </form>
 </div>

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CalculatePremiumServiceService } from './calculate-premium-service.service';
+import { CalculatePremiumService } from './calculate-premium.service';
 
 describe('CalculatePremiumServiceService', () => {
-  let service: CalculatePremiumServiceService;
+  let service: CalculatePremiumService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CalculatePremiumServiceService);
+    service = TestBed.inject(CalculatePremiumService);
   });
 
   it('should be created', () => {

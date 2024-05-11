@@ -4,12 +4,15 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app.routes';
-import { CalculatePremiumServiceService } from './services/calculate-premium-service.service';
+import { CalculatePremiumService } from './services/calculate-premium.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatInputModule,
     MatButtonModule,
     MatIconModule,
+    HttpClientModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
     // Add other imported modules here
   ],
-  providers: [CalculatePremiumServiceService, provideAnimationsAsync()],
+  providers: [CalculatePremiumService, provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {
