@@ -1,3 +1,145 @@
+.tal-text-color-amber {
+  color: #ffb500;
+}
+
+.tal-background-color-amber {
+  background-color: #ffb500;
+}
+
+.mat-radio-group-wrapper {
+  border: none;
+  background-color: white;
+}
+
+mat-radio-group:focus {
+  outline: 1px solid blue;
+  outline-offset: 2px;
+}
+:host ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #ffb500;
+}
+.opacity-5 {
+  opacity: 0.5;
+}
+
+/* Override mat-form end */
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}
+
+.tal-bg-dark-color {
+  background-color: #002f5f;
+}
+
+.tal-button-primary {
+  background-color: #ffb500;
+  color: #002f5f;
+}
+.tal-button-reject {
+  background-color: #ff3300;
+  color: #ffffff;
+}
+.tal-button-secondary {
+  background-color: #002f5f;
+  color: #ffffff;
+}
+
+.tal-button-label-primary {
+  text-align: center;
+  font-weight: bold;
+  background-color: #ffb500;
+  color: #002f5f;
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  padding-top: 10px;
+}
+
+.tal-button-label-secondary {
+  text-align: center;
+  background-color: #002f5f;
+  color: #ffffff;
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  padding-top: 10px;
+}
+
+.tal-button-label-secondary:hover {
+  cursor: pointer;
+}
+
+.tal-button-label-primary:hover {
+  cursor: pointer;
+}
+
+.tal-text-info {
+  color: rgb(54, 106, 158);
+}
+
+.positive-icon {
+  color: #00c257;
+}
+
+.negative-icon {
+  color: #ff4747;
+}
+
+.neutral-icon {
+  color: #fdb414;
+}
+
+.grey-icon {
+  color: gray;
+}
+
+.refresh-icon {
+  color: #3535ff;
+}
+
+.z-index-top {
+  z-index: 10;
+}
+/* Override mat-form end */
+.tal-info-text {
+  color: rgb(54, 106, 158);
+}
+/* Override mat-form end */
+
+.positive-icon {
+  color: #00c257;
+}
+
+.negative-icon {
+  color: #ff4747;
+}
+
+.neutral-icon {
+  color: #fdb414;
+}
+
+.grey-icon {
+  color: gray;
+}
+
+.refresh-icon {
+  color: #3535ff;
+}
+.error-message {
+  color: red;
+}
+
 :host {
   --bright-blue: oklch(51.01% 0.274 263.83);
   --electric-violet: oklch(53.18% 0.28 296.97);

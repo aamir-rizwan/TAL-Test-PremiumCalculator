@@ -27,7 +27,6 @@ namespace TAL_PremiumCalculatorAPI.Controllers
             return base.HandleResult(result);            
         }
 
-
         [HttpGet]
         [Route("GetOccupationRatings")]
         public async Task<ActionResult<ApiResponse<List<OccupationRating>>>> GetOcRatings()

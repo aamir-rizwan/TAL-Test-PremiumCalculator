@@ -1,6 +1,5 @@
 ﻿using TAL_PremiumCalculatorAPI.Models;
 using TAL_PremiumCalculatorAPI.Services.Abstractions;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace TAL_PremiumCalculatorAPI.Services.Implementations
 {
@@ -13,12 +12,13 @@ namespace TAL_PremiumCalculatorAPI.Services.Implementations
             this._occupations = occupations;
             this._logger = logger;
         }
+
         public async Task<Result<PremiumCalculatorResponse>> CalculateMyPremium(PremiumCalculatorRequest request)
         {
             var validationResult = PremiumCalculatorRequest.Validate(request);
             if (validationResult.IsFailure)
             {
-                var msg = $"Please provide a valid data {validationResult.Error} ";
+                var msg = $"Please provide a valid data, {validationResult.Error} ";
                 _logger.LogError(msg);
                 return Result.Failure<PremiumCalculatorResponse>(msg, StatusCodes.Status404NotFound);
             } 

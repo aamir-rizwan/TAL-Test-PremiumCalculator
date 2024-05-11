@@ -1,4 +1,4 @@
-<main class="main">
+<!-- <main class="main">
   <div class="content">
     <div class="left-side">
       <h1>{{ title }}</h1>
@@ -6,4 +6,51 @@
     </div>
   </div>
 </main>
-<router-outlet />
+<router-outlet /> -->
+<div class="container-fluid header-color header">
+  <div class="container padding-top-15">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <ng-container [ngTemplateOutlet]="mainMenuItems"></ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid; page-height" ngClass="header-color: true">
+  <div class="row">
+    <div
+      class="col-lg-12 container-min-height padding-top-100"
+      style="padding: 100px; text-align: center"
+    >
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<ng-template #mainMenuItems>
+  <div class="container">
+    <div class="item">
+      <a class="headerbtn" routerLink="/dashboard" id="a-dashboard-tab">
+        <span class="headerbtn" id="span-dashboard-tab">Dashboard</span>
+      </a>
+    </div>
+
+    <div class="item">
+      <a class="headerbtn" routerLink="/occupation" id="a-occupation-tab">
+        <span class="headerbtn" id="span-occupation-tab">Occupations</span>
+      </a>
+    </div>
+    <div class="item">
+      <a
+        class="headerbtn"
+        routerLink="/calculatepremium"
+        id="a-calculatepremium-tab"
+      >
+        <span class="nav-link-color" id="span-calculatepremium-tab"
+          >Calculate premium</span
+        >
+      </a>
+    </div>
+  </div>
+</ng-template>
