@@ -5,3 +5,5 @@
 /TAL-PremiumCalculatorAPI/bin/Debug/net8.0
 /TAL-PremiumCalculatorAPI/obj
 /.vs
+/TAL-PremiumCalculatorUnitTest/bin/Debug/net8.0
+/TAL-PremiumCalculatorUnitTest/obj
